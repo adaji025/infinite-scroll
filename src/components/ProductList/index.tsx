@@ -44,8 +44,9 @@ const ProductList = () => {
   return (
     <Fragment>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-[1350px] px-5 lg:px-10 mx-auto pt-10">
-        {products.map((product) => (
+        {products.map((_, index) => (
           <Card
+            key={index}
             shadow="sm"
             padding="xl"
             component="a"
